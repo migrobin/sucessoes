@@ -93,7 +93,7 @@ s, err = isValidInput(userInput)
 
 if err != nil {
     fmt.Println("\nDados invalidos. \033[97;1mTás a gozar Bro ? \033[0m  Ctrl + C para sair")
-    fmt.Println(err)
+    //fmt.Println(err)
   
 } else {
     break
