@@ -68,7 +68,7 @@ func print (num float32, ter float32) string {
 func main() {
 
     fmt.Println("-------------------------------------------------------------------------")
- fmt.Println("\033[33;1mBem vindo ao goCalc\033[0m\n")
+ fmt.Println("Bem vindo ao goCalc\n")
  fmt.Println("Calcula um termo geral de uma sucessão a partir de 3 termos consecutivos\n")
  var s[3]float32
  
@@ -86,8 +86,8 @@ if err != nil {
 s, err = isValidInput(userInput)
 
 if err != nil {
-    fmt.Println("\nDados invalidos. \033[97;1mTás a gozar Bro ? \033[0m  Ctrl + C para sair")
-    fmt.Println(err)
+    fmt.Println("\nDados invalidos. Tás a gozar Bro ?   Ctrl + C para sair")
+   
   
 } else {
     break
@@ -97,7 +97,7 @@ if err != nil {
 }
   
 fmt.Println("\n-------------------------------------------------------------------------")
-    fmt.Println("Sucessão  -> \033[33;1m", s, "\033[0m   O termo geral será da forma \033[34;1m Un = an² + bn + c\033[0m")
+    fmt.Println("Sucessão  -> ", s, "   O termo geral será da forma  Un = an² + bn + c")
     fmt.Println("\nVamos calcular os 3 primeiros termos :")
 
     var a,b,c float32
@@ -106,9 +106,9 @@ fmt.Println("\n-----------------------------------------------------------------
     b = (-5*s[0] + 8*s[1] - 3*s[2]) / 2
     c = (6*s[0] - 6*s[1] + 2*s[2]) / 2
 
-    fmt.Println("\nU1: -> a(1²) + b(1) + c =\033[33m", s[0], "\033[0m    (1) -> a + b + c =\033[33m", s[0],"\033[0m")
-    fmt.Println("U2: -> a(2²) + b(2) + c =\033[33m", s[1], "\033[0m    (2) -> 4a + 2b + c =\033[33m", s[1],"\033[0m")
-    fmt.Println("U3: -> a(3²) + b(3) + c =\033[33m", s[2], "\033[0m    (3) -> 9a + 3b + c =\033[33m", s[2],"\033[0m")
+    fmt.Println("\nU1: -> a(1²) + b(1) + c =", s[0], "    (1) -> a + b + c =", s[0],"")
+    fmt.Println("U2: -> a(2²) + b(2) + c =", s[1], "    (2) -> 4a + 2b + c =", s[1],"")
+    fmt.Println("U3: -> a(3²) + b(3) + c =", s[2], "    (3) -> 9a + 3b + c =", s[2],"")
 
     fmt.Println("\nSubtrair (2)-(1) =>  3a + b =", (s[1] - s[0]))
     fmt.Println("Subtrair (3)-(2) =>  5a + b =", (s[2] - s[1]))
@@ -117,9 +117,9 @@ fmt.Println("\n-----------------------------------------------------------------
 
     temp:= print(a, 1) + print(b, 2) + print(c, 3)
     if temp == "" {
-        fmt.Println("\n\nO termo geral será  \033[33;1m  Un =", 0 ,"\033[0m\n")
+        fmt.Println("\n\nO termo geral será    Un =", 0 ,"\n")
     }  else {
-    fmt.Println("\n\nO termo geral será  \033[33;1m  Un =", temp,"\033[0m\n")
+    fmt.Println("\n\nO termo geral será    Un =", temp,"\n")
 }
 
 
