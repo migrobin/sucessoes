@@ -42,8 +42,11 @@ func print (num float32, ter float32) string {
     }
 
     if ter == 1 {
-        if num == 1 {
+        if num == 1  {
             return "n²"
+        }
+        if num == -1  {
+            return "-n²"
         }
         return fmt.Sprintf("%gn²", num )
     }
@@ -51,6 +54,9 @@ func print (num float32, ter float32) string {
     if ter == 2 {
         if num == 1 {
             return " +n"
+        }
+        if num == -1 {
+            return " -n"
         }
         if num > 1 {
             return fmt.Sprintf(" +%gn", num)
@@ -67,13 +73,13 @@ func print (num float32, ter float32) string {
 
 func main() {
 
-    fmt.Println("-------------------------------------------------------------------------")
- fmt.Println("Bem vindo ao goCalc\n")
- fmt.Println("Calcula um termo geral de uma sucessão a partir de 3 termos consecutivos\n")
+ fmt.Println("-------------------------------------------------------------------------")
+ fmt.Println("Bem vindo ao goCalc")
+ fmt.Println("\nCalcula um termo geral de uma sucessão a partir de 3 termos consecutivos")
  var s[3]float32
  
  for {
- fmt.Println("introduz 3 termos separados por uma virgula\n")
+ fmt.Println("\nintroduz 3 termos separados por uma virgula\n")
 
  var userInput ,err = getUserInput()
 
