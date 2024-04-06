@@ -45,12 +45,18 @@ func print (num float32, ter float32) string {
         if num == 1 {
             return "n²"
         }
+        if num == -1 {
+            return "-n²"
+        }
         return fmt.Sprintf("%gn²", num )
     }
 
     if ter == 2 {
         if num == 1 {
             return " +n"
+        }
+        if num == -1 {
+            return " -n"
         }
         if num > 1 {
             return fmt.Sprintf(" +%gn", num)
